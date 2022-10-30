@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageCat"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/publicAvatar" />
+
+    <ImageView
+        android:id="@+id/publicAvatar"
+        android:layout_width="60dp"
+
+        android:layout_height="60dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/black" />
+
+    <TextView
+        android:id="@+id/publicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/publicAvatar"
+        app:layout_constraintTop_toTopOf="@+id/publicAvatar"
+        tools:text = "Public Name"
+        />
+
+
+    <TextView
+        android:id="@+id/likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="#34DC0000"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:drawableStartCompat="@drawable/ic_likes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCat"
+        tools:text="146 likes" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:background="#452196F3"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:drawableStartCompat="@drawable/ic_comment"
+        app:layout_constraintStart_toEndOf="@+id/likes"
+        app:layout_constraintTop_toBottomOf="@+id/imageCat"
+        tools:text="12" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/publicAvatar"
+        app:layout_constraintStart_toStartOf="@+id/publicName"
+        app:layout_constraintTop_toBottomOf="@+id/publicName"
+        tools:text="вчера в 14:00" />
+
+    <View
+        android:id="@+id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/likes"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#32000000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
